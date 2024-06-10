@@ -1,0 +1,604 @@
+<meta http-equiv="Cache-Control" content="max-age=86400" />
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="Evaluating mathematical reasoning of foundation models in visual contexts">
+  <meta name="keywords" content="MathVista, Math Vista">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CS-Bench: An All-Round Benchmark for Large Language Modelstowards Computer Science Mastery</title>
+
+
+  <link rel="icon" href="./static/images/csbench_logo_2.png">
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="stylesheet" href="./static/css/leaderboard.css">
+
+ <script type="text/javascript" src="static/js/sort-table.js" defer></script>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/explorer-index.js"></script>
+  <script src="./static/js/question_card.js"></script>
+
+  <script src="./static/js/leaderboard_testmini.js"></script>  
+  <script src="./data/results/output_folders.js" defer></script>
+  <script src="./data/results/model_scores.js" defer></script>
+
+  <script src="./visualizer/data/data_public.js" defer></script>
+</head>
+<body>
+
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+</nav>
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title is-bold">
+            <img src="static/images/csbench_logo_2.png" style="width:1em;vertical-align: middle" alt="Logo"/>
+            <span class="csbench" style="vertical-align: middle">CS-Bench</span>
+            </h1>
+          <h2 class="subtitle is-3 publication-subtitle">
+            A Comprehensive Benchmark for Large Language Models towards Computer Science Mastery
+            
+          </h2>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://songxiaoshuai.github.io/">Xiaoshuai Song</a>,</span>
+            <span class="author-block">
+              <a href="https://github.com/LeonDiao0427/">Muxi Diao</a>,</span>
+            <span class="author-block">
+              <a href="https://dongguanting.github.io/">Guanting Dong</a>,
+            </span>
+            <span class="author-block">
+              <a href="https://pris-nlp.github.io/">Zhengyang Wang</a>,
+            </span>
+            <span class="author-block">
+              <a href="https://pris-nlp.github.io/">Yujia Fu</a>,
+            </span>
+            <span class="author-block">
+              <a href="https://pris-nlp.github.io/">Runqi Qiao</a>,
+            </span>
+            <span class="author-block">
+              <a href="https://pris-nlp.github.io/">Zhexu Wang</a>,
+            </span>
+            <span class="author-block">
+              <a href="https://pris-nlp.github.io/">Dayuan Fu</a>,
+            </span>
+            <span class="author-block">
+              <a href="https://pris-nlp.github.io/">Huangxuan Wu</a>,
+            </span>
+            <span class="author-block">
+              <a href="https://pris-nlp.github.io/">Weihao Zeng</a>,
+            </span>
+            <span class="author-block">
+              <a href="https://pris-nlp.github.io/">Yejie Wang</a>,
+            </span>
+            <span class="author-block">
+              <a href="https://pris-nlp.github.io/">Zhuoma Gongque</a>,
+            </span>
+            <span class="author-block">
+              <a href="https://pris-nlp.github.io/">Jianing Yu</a>,
+            </span>
+            <span class="author-block">
+              <a href="https://pris-nlp.github.io/">Qiuna Tan</a>,
+            </span>
+            <span class="author-block">
+              <a href="https://pris-nlp.github.io/">Weiran Xu</a>
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">Beijing University of Posts and Telecommunications</span><br>
+            <!-- <span class="paper-block"><b style="color:#f41c1c">ICLR 2024 Oral</b> (85 in 7304, 1.2%)</span> -->
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <!-- @PAN TODO: change links -->
+                <a href="https://pris-nlp.github.io/"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="https://pris-nlp.github.io/"
+                   class="external-link button is-normal is-rounded is-dark">
+                
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+              
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="https://pris-nlp.github.io/"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>
+              <!-- Dataset Link. -->
+              <span class="link-block">
+                <a href="https://pris-nlp.github.io/"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <!-- <i class="far fa-images"></i> -->
+                      <p style="font-size:18px">🤗</p>
+                      <!-- 🔗 -->
+                  </span>
+                  <span>Dataset</span>
+                </a>
+              </span>
+              
+              <!-- Leaderboard Link. -->
+              <span class="link-block">
+                <a href="https://csbench.github.io/#leaderboard"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <p style="font-size:18px">🏆</p>
+                  </span>
+                  <span>Leaderboard</span>
+                </a>
+              </span>
+              
+              <!-- </span> -->
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<section class="section">
+  <div class="container" style="margin-top: -100px; margin-bottom: -100px;"></div>
+  <div class="container" style="margin-bottom: 2vh;">
+    <!-- <div class="container" style="margin-top: -150px; margin-bottom: -100px;"></div> -->
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Introduction</h2>
+        <div class="content has-text-justified">
+          <p>
+            Computer Science (CS) stands as a testament to the intricacies of human intelligence, profoundly advancing the development of artificial intelligence and modern society. However, the current community of large language models (LLMs) overly focuses on benchmarks for analyzing specific foundational skills (e.g. mathematics and code generation), neglecting an all-round evaluation of the computer science field. To bridge this gap, we introduce CS-Bench, the first bilingual (Chinese-English) benchmark dedicated to evaluating the performance of LLMs in computer science. CS-Bench comprises approximately 5K meticulously curated test samples, covering 26 subfields across 4 key areas of computer science, encompassing various task forms and divisions of knowledge and reasoning. Utilizing CS-Bench, we conduct a comprehensive evaluation of over 30 mainstream LLMs, revealing the relationship between CS performance and model scales. We also quantitatively analyze the reasons for failures in existing LLMs and highlight directions for improvements, including knowledge supplementation and CS-specific reasoning. Further cross-capability experiments show a high correlation between LLMs' capabilities in computer science and their abilities in mathematics and coding. Moreover, expert LLMs specialized in mathematics and coding also demonstrate strong performances in several CS subfields. Looking ahead, we envision CS-Bench serving as a cornerstone for LLM applications in the CS field and paving new avenues in assessing LLMs' diverse reasoning capabilities.
+          </p>
+      </div>
+      
+      </div>
+    </div>
+    <!--/ Abstract. -->
+</div>
+</section>
+
+
+<section class="section">
+  <div class="container" style="margin-top: -170px; margin-bottom: -100px;">
+    <div class="columns is-centered m-6">
+      <div class="column is-full has-text-centered content">
+        <div id="results-carousel" class="carousel results-carousel">
+          <div class="box m-5">
+            <div class="content has-text-centered">
+              <img src="static/images/csbench_main.png" alt="geometric reasoning" style="width:84%; height:500px; object-fit: contain;"/>
+              <p> Overview diagram and statistics of 
+              <img src="static/images/csbench_logo_2.png" style="width:1.0em;vertical-align: middle" alt="Logo"/>
+              <span class="csbench">CS-Bench.</span>
+               </p>
+            </div>
+          </div>
+          <div class="box m-5">
+            <div class="content has-text-centered">
+              <img src="static/images/leaderboard.png" alt="geometric reasoning" style="width:84%; height:500px; object-fit: contain;"/>
+              <p> The leaderboard of LLMs on
+                <img src="static/images/csbench_logo_2.png" style="width:1.0em;vertical-align: middle" alt="Logo"/>
+                <span class="csbench">CS-Bench</span>  (EN).
+              </p>
+            </div>
+          </div>
+          <div class="box m-5">
+            <div class="content has-text-centered">
+              <img src="static/images/main_radir_00.png" alt="geometric reasoning" style="width:84%; height:500px; object-fit: contain;"/>
+              <p> Comparison of representative LLMs' scores across different domains and tasks on 
+                <img src="static/images/csbench_logo_2.png" style="width:1.0em;vertical-align: middle" alt="Logo"/>
+                <span class="csbench">CS-Bench</span>  (EN).
+              
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</section>
+
+
+<section class="section">
+  <div class="container">
+    
+    <div class="columns is-centered">
+      <div class="column is-full has-text-centered content">
+        <h2 class="title is-3" id="leaderboard">Leaderboard on <img src="static/images/csbench_logo_2.png" style="width:1.0em;vertical-align: middle" alt="Logo"/>
+          <span class="csbench">CS-Bench</span>  (EN)</h2>
+        
+<section class="section">
+  <div class="container" style="margin-top: -120px; margin-bottom: -100px;">
+    <div class="columns is-centered m-6">
+      <div class="column is-full has-text-centered content">
+        <div id="results-carousel" class="carousel results-carousel">
+          <div class="box m-5">
+            <div class="content has-text-centered">
+              <img src="static/images/web_leaderboard_en.png" alt="geometric reasoning" style="width:84%; height:500px; object-fit: contain;"/>
+              <p> The leaderboard of LLMs on
+                <img src="static/images/csbench_logo_2.png" style="width:1.0em;vertical-align: middle" alt="Logo"/>
+                <span class="csbench">CS-Bench</span>  (EN).
+              </p>
+            </div>
+          </div>
+          <div class="box m-5">
+            <div class="content has-text-centered">
+              <img src="static/images/en_result_1.png" alt="geometric reasoning" style="width:84%; height:500px; object-fit: contain;"/>
+              <p> Zero-shot scores (%) of LLMs across domains on
+                <img src="static/images/csbench_logo_2.png" style="width:1.0em;vertical-align: middle" alt="Logo"/>
+                <span class="csbench">CS-Bench</span>  (EN), where "Klg" denotes knowledge-type, <br/>"Rng" denotes reasoning-type, and "Avg" denotes Average. 
+                <!-- <br/> -->
+                The random scores are weighted as follows:<br/> 25% for multiple-choice(MC), 50% for Assertion, 0% for fill-in-the-blank(FITB), and 10% for Open-ended.
+              <!-- across mathematical reasoning and visual context types. PoT refers to program-of-thought prompting, and PoT GPT-4 is a textual LLM augmented with the caption and OCR text. GPT-4V is manually evaluated via the playground chatbot. <b class="best-score-text" style="color: #C6011F"> The scores of Gemini Ultra are from the Gemini Team, Google.</b> -->
+              </p>
+            </div>
+          </div>
+          <div class="box m-5">
+            <div class="content has-text-centered">
+              <img src="static/images/en_result_2.png" alt="geometric reasoning" style="width:84%; height:500px; object-fit: contain;"/>
+              <p> Zero-shot scores (%) of LLMs across task formats on 
+                <img src="static/images/csbench_logo_2.png" style="width:1.0em;vertical-align: middle" alt="Logo"/>
+                <span class="csbench">CS-Bench</span>  (EN).
+              <!-- across mathematical reasoning and visual context types. PoT refers to program-of-thought prompting, and PoT GPT-4 is a textual LLM augmented with the caption and OCR text. GPT-4V is manually evaluated via the playground chatbot. -->
+              
+              </p>
+            </div>
+          </div>
+
+          <div class="box m-5">
+            <div class="content has-text-centered">
+              <img src="static/images/ability.png" alt="geometric reasoning" style="width:100%; height:550px; object-fit: contain;"/>
+              
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</section>
+
+
+        <h2 class="title is-3" id="leaderboard">Leaderboard on <img src="static/images/csbench_logo_2.png" style="width:1.0em;vertical-align: middle" alt="Logo"/>
+          <span class="csbench">CS-Bench</span>  (CN)</h2>
+          <section class="section">
+            <div class="container" style="margin-top: -120px; margin-bottom: -100px;">
+              <div class="columns is-centered m-6">
+                <div class="column is-full has-text-centered content">
+                  <div id="results-carousel" class="carousel results-carousel">
+                    <div class="box m-5">
+                      <div class="content has-text-centered">
+                        <img src="static/images/web_leaderboard_cn.png" alt="geometric reasoning" style="width:84%; height:500px; object-fit: contain;"/>
+                        <p> The leaderboard of LLMs on
+                          <img src="static/images/csbench_logo_2.png" style="width:1.0em;vertical-align: middle" alt="Logo"/>
+                          <span class="csbench">CS-Bench</span>  (CN).
+                        <!-- across mathematical reasoning and visual context types. PoT refers to program-of-thought prompting, and PoT GPT-4 is a textual LLM augmented with the caption and OCR text. GPT-4V is manually evaluated via the playground chatbot. <b class="best-score-text" style="color: #C6011F"> The scores of Gemini Ultra are from the Gemini Team, Google.</b> -->
+                        </p>
+                      </div>
+                    </div>
+                    <div class="box m-5">
+                      <div class="content has-text-centered">
+                        <img src="static/images/cn_result_1.png" alt="geometric reasoning" style="width:84%; height:500px; object-fit: contain;"/>
+                        <p> Zero-shot scores (%) of LLMs across domains on
+                          <img src="static/images/csbench_logo_2.png" style="width:1.0em;vertical-align: middle" alt="Logo"/>
+                          <span class="csbench">CS-Bench</span>  (CN), where "Klg" denotes knowledge-type, <br/>"Rng" denotes reasoning-type, and "Avg" denotes Average. 
+                          <!-- <br/> -->
+                          The random scores are weighted as follows:<br/> 25% for multiple-choice(MC), 50% for Assertion, 0% for fill-in-the-blank(FITB), and 10% for Open-ended.
+                        <!-- across mathematical reasoning and visual context types. PoT refers to program-of-thought prompting, and PoT GPT-4 is a textual LLM augmented with the caption and OCR text. GPT-4V is manually evaluated via the playground chatbot. <b class="best-score-text" style="color: #C6011F"> The scores of Gemini Ultra are from the Gemini Team, Google.</b> -->
+                        </p>
+                      </div>
+                    </div>
+                    <div class="box m-5">
+                      <div class="content has-text-centered">
+                        <img src="static/images/cn_result_2.png" alt="geometric reasoning" style="width:84%; height:500px; object-fit: contain;"/>
+                        <p> Zero-shot scores (%) of LLMs across task formats on 
+                          <img src="static/images/csbench_logo_2.png" style="width:1.0em;vertical-align: middle" alt="Logo"/>
+                          <span class="csbench">CS-Bench</span>  (CN).
+                        <!-- across mathematical reasoning and visual context types. PoT refers to program-of-thought prompting, and PoT GPT-4 is a textual LLM augmented with the caption and OCR text. GPT-4V is manually evaluated via the playground chatbot. -->
+                        
+                        </p>
+                      </div>
+                    </div>
+
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<p>🚨 To submit your results to the leaderboard, please send to <a href="mailto:csbench2024@gmail.com">this email</a> with your result json files.</p>
+
+<!-- DATASET SECTION -->
+<section class="hero is-light is-small">
+  <div class="hero-body has-text-centered">
+     <h1 class="title is-1 csbench">
+    <img src="static/images/csbench_logo_2.png" style="width:1.5em;vertical-align: middle" alt="Logo"/>
+                          <span class="csbench" style="width:1.5em;vertical-align: middle">CS-Bench Dataset</span>
+  </h1>
+  </div>
+</section>
+
+            
+<section class="section">
+  <div class="container">
+    <div class="columns is-centered has-text-centered">
+      <!-- <div class="column is-full-width has-text-centered"> -->
+        <div class="column is-four-fifths">
+        <h2 class="title is-3">Overview</h2>
+        <div class="content has-text-justified">
+          <p>
+            <img src="static/images/csbench_logo_2.png" style="width:1.0em;vertical-align: middle" alt="Logo"/>
+            <span class="csbench">CS-Bench</span> is the <b>first</b> benchmark dedicated to 
+            evaluating the performance of LLMs in the field of computer science. CS-Bench
+            supports <b>bilingual</b> assessment, encompassing a total of <b> 26 subfields </b>across <b>4 domains</b>, 
+            with a cumulative total of 4838 samples. These samples encompass <b>various task formats</b> including multiple-choice, 
+            assertion, fill-in-the-blank,
+             and open-ended questions. Besides, CS-Bench assesses both knowledge-type and higher-order reasoning-type questions, 
+             with each reasoning question accompanied by an explanation. 
+            To validate the effectiveness of models, we randomly sample 10% of the data for validation, using the remaining 90% for testing. 
+            </p>
+          <h2 class="title is-3" style="text-align: center;">Statistics</h2>
+
+          <section class="section">
+            <div class="container" style="margin-top: -120px; margin-bottom: -100px;">
+              <div class="columns is-centered m-6">
+                <div class="column is-full has-text-centered content">
+                  <div id="results-carousel" class="carousel results-carousel">
+                    <div class="box m-5">
+                      <div class="content has-text-centered">
+                        <img src="static/images/appendix_pie.png" alt="geometric reasoning" style="width:84%; height:400px; object-fit: contain;"/>
+                        <p style="margin-top: -10px"> The quantity and proportion of each type in different dimensions on
+                          <img src="static/images/csbench_logo_2.png" style="width:1.0em;vertical-align: middle" alt="Logo"/>
+                          <span class="csbench">CS-Bench</span> .
+                        <!-- across mathematical reasoning and visual context types. PoT refers to program-of-thought prompting, and PoT GPT-4 is a textual LLM augmented with the caption and OCR text. GPT-4V is manually evaluated via the playground chatbot. <b class="best-score-text" style="color: #C6011F"> The scores of Gemini Ultra are from the Gemini Team, Google.</b> -->
+                        </p>
+                      </div>
+                    </div>
+                    <div class="box m-5">
+                      <div class="content has-text-centered">
+                        <img src="static/images/appendix_length_distribution_en_detail.png" alt="geometric reasoning" style="width:84%; height:400px; object-fit: contain;"/>
+                        <p> Question and answer lengths of each task format on
+                          <img src="static/images/csbench_logo_2.png" style="width:1.0em;vertical-align: middle" alt="Logo"/>
+                          <span class="csbench">CS-Bench</span>  (EN), 
+                        </p>
+                      </div>
+                    </div>
+                    <div class="box m-5">
+                      <div class="content has-text-centered">
+                        <img src="static/images/appendix_length_distribution_cn_detail.png" alt="geometric reasoning" style="width:84%; height:400px; object-fit: contain;"/>
+                        <p> Question and answer lengths of each task format on 
+                          <img src="static/images/csbench_logo_2.png" style="width:1.0em;vertical-align: middle" alt="Logo"/>
+                          <span class="csbench">CS-Bench</span>  (CN).
+                        <!-- across mathematical reasoning and visual context types. PoT refers to program-of-thought prompting, and PoT GPT-4 is a textual LLM augmented with the caption and OCR text. GPT-4V is manually evaluated via the playground chatbot. -->
+                        
+                        </p>
+                      </div>
+                    </div>
+
+                    <div class="box m-5">
+                      <div class="content has-text-centered">
+                        <img src="static/images/table_5.png" alt="geometric reasoning" style="width:99%; height:500px; object-fit: contain;"/>
+                        <p> Summary of 26 fine-grained subfields of
+                          <img src="static/images/csbench_logo_2.png" style="width:1.0em;vertical-align: middle" alt="Logo"/>
+                          <span class="csbench">CS-Bench</span>.
+                        <!-- across mathematical reasoning and visual context types. PoT refers to program-of-thought prompting, and PoT GPT-4 is a textual LLM augmented with the caption and OCR text. GPT-4V is manually evaluated via the playground chatbot. -->
+                        
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+          </section>
+
+
+    <div class="columns is-centered m-5">
+      <div class="column is-full has-text-centered content">
+        <h2 class="title is-3">Examples</h2>
+      
+        <section class="section">
+          <div class="container" style="margin-top: -80px; margin-bottom: -10px;">
+            <div class="columns is-centered has-text-centered">
+              <div class="column is-full has-text-centered content">
+                <div id="results-carousel" class="carousel results-carousel">
+                  <div class="box m-5">
+                    <div class="content has-text-centered">
+                      <img src="static/images/table_6.png" alt="geometric reasoning" style="width:99%; height:500px; object-fit: contain;"/>
+                      <p> Examples of samples in different domains.
+                       
+                      </p>
+                    </div>
+                  </div>
+                  <div class="box m-5">
+                    <div class="content has-text-centered">
+                      <img src="static/images/table_7.png" alt="geometric reasoning" style="width:84%; height:500px; object-fit: contain;"/>
+                      <p> Examples of different task formats.
+                        </p>
+                    </div>
+                  </div>
+                  <div class="box m-5">
+                    <div class="content has-text-centered">
+                      <img src="static/images/table_8.png" alt="geometric reasoning" style="width:84%; height:400px; object-fit: contain;"/>
+                      <p> Examples of knowledge-type and reasoning-type.
+                      
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="box m-5">
+                    <div class="content has-text-centered">
+                      <img src="static/images/table_9.png" alt="geometric reasoning" style="width:99%; height:400px; object-fit: contain;"/>
+                      <p> Examples of different languages.
+                      
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </section>
+
+
+
+
+
+<!-- RESULTS SECTION -->
+<section class="hero is-light is-small">
+  <div class="hero-body has-text-centered">
+    <h1 class="title is-1 csbench">Experiment Results</h1>
+  </div>
+</section>
+        
+<section class="section">
+  <div class="container" style="margin-top: -60px; margin-bottom: -100px;">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full has-text-centered content">
+        <div id="results-carousel" class="carousel results-carousel">
+          <div class="box m-5">
+            <div class="content has-text-centered">
+              <img src="static/images/linear.png" alt="geometric reasoning" style="width:84%; height:500px; object-fit: contain;"/>
+              <p style="margin-top: -20px;"> The performance of LLMs at different parameter scales(Left).
+                <br>The scale-score fitting curve of Qwen1.5 and Llama2 series(Right).
+                </p>
+            </div>
+          </div>
+          <div class="box m-5">
+            <div class="content has-text-centered">
+              <img src="static/images/result_fs.png" alt="geometric reasoning" style="width:84%; height:400px; object-fit: contain;margin-top: 60px"/>
+              <p style="margin-top: 20px"> Comparison of models under different settings.
+                </p>
+            </div>
+          </div>
+          <div class="box m-5">
+            <div class="content has-text-centered">
+              <img src="static/images/bad_case.png" alt="geometric reasoning" style="width:84%; height:350px; object-fit: contain;"/>
+              <p style="margin-top: 20px;margin-bottom: 10px"> The proportion of different error types varies by models for multiple-choice questions.
+              
+              </p>
+            </div>
+          </div>
+
+          <div class="box m-5">
+            <div class="content has-text-centered">
+              <img src="static/images/cn&en.png" alt="geometric reasoning" style="width:100%; height:400px; object-fit: contain;"/>
+              <p> Comparison of models in different languages on CS-Bench.
+              
+              </p>
+            </div>
+          </div>
+
+          <div class="box m-5">
+            <div class="content has-text-centered">
+              <img src="static/images/main_code_math_cs.png" alt="geometric reasoning" style="width:84%; height:500px; object-fit: contain;"/>
+              <p> The score changes on CS-Bench as LLM's Math/Code score increases.<br> &#x1D4AB; denotes Pearson correlation coefficient.
+               </p>
+            </div>
+          </div>
+
+          <div class="box m-5">
+            <div class="content has-text-centered">
+              <img src="static/images/result_2table.png" alt="geometric reasoning" style="width:84%; height:500px; object-fit: contain;"/>
+              <p> The performance of code- and math-specific expert LLMs on  
+                <img src="static/images/csbench_logo_2.png" style="width:1.0em;vertical-align: middle" alt="Logo"/>
+                <span class="csbench">CS-Bench</span> 
+              <!-- across mathematical reasoning and visual context types. PoT refers to program-of-thought prompting, and PoT GPT-4 is a textual LLM augmented with the caption and OCR text. GPT-4V is manually evaluated via the playground chatbot. -->
+              
+              </p>
+            </div>
+          </div>
+
+
+        </div>
+      </div>
+    </div>
+</section>
+<!-- @PAN TODO: bibtex -->
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title is-3 has-text-centered">BibTeX</h2>
+    <!-- <pre><code>@inproceedings{lu2024csbench,
+  author    = {Lu, Pan and Bansal, Hritik and Xia, Tony and Liu, Jiacheng and Li, Chunyuan and Hajishirzi, Hannaneh and Cheng, Hao and Chang, Kai-Wei and Galley, Michel and Gao, Jianfeng},
+  title     = {MathVista: Evaluating Mathematical Reasoning of Foundation Models in Visual Contexts},
+  booktitle={International Conference on Learning Representations (ICLR)},
+  year      = {2024}
+}</code></pre> -->
+  </div>
+</section>
+
+<section>
+  <div class="section" id="org-banners" style="display:flex">
+    <a href="https://www.bupt.edu.cn/" target="_blank" rel="external">
+        <img class="center-block org-banner" src="static/images/bupt.png">
+    </a>
+    <a href="https://pris-nlp.github.io/" target="_blank" rel="external">
+      <img class="center-block org-banner" src="static/images/PRIS.png">
+  </a>
+  </div>
+
+</section>
+
+
+<footer class="footer">
+  <!-- <div class="container"> -->
+    <div class="content has-text-centered">
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This website is website adapted from <a href="https://nerfies.github.io/">Nerfies</a> and <a href="https://csbench.github.io/">MathVista</a>, licensed under a <a rel="license"
+                                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  <!-- </div> -->
+</footer>
+
+</body>
+</html>
